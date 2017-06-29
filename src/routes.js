@@ -5,12 +5,12 @@ const httpUtils = require('./httpUtils.js');
 
 module.exports = function (consumerKey, consumerSecret, oauth_callback, userHandler, callback_render){
     twitter.init(consumerKey, consumerSecret, oauth_callback);
-    registerRoutes(userHandler);
+    registerRoutes(userHandler, callback_render);
     return api;
 };
 
 
-function registerRoutes(userHandler){
+function registerRoutes(userHandler, callback_render){
     api.get('/twitter/signin', function(req, res, next){
         
         twitter
