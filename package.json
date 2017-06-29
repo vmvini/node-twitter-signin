@@ -25,7 +25,8 @@
     "express",
     "signin",
     "spa",
-    "spa-app"
+    "spa-app", 
+    "login"
   ],
   "author": "vmvini",
   "license": "MIT",
