@@ -11,7 +11,7 @@ sets twitter oauth authentication on your node js express server specifically to
   const TwitterApi = require('node-twitter-signin');
   
   //really simple, right?
-  app.use('/', TwitterApi(key, secret, callbackUrl, callback ));
+  app.use('/', TwitterApi(key, secret, callbackUrl, callback, callback_render ));
   
   /**
     key:  twitter app's consumer key
@@ -26,6 +26,20 @@ sets twitter oauth authentication on your node js express server specifically to
           //like, save on the database, send a message through socketio to the client app, etc...
           console.log("user", user);
           console.log("token", token);
+
+          //token has the properties below:
+          //  -token (is the access_token)
+          //  -secret (is the token secret)
+          //  -request_token (is the related request_token )
+        }
+
+    callback_render: will be called giving the express 'res' object to allow you decide 
+      what to send to the client when your callbackUrl is called.
+      for example:
+        function callback_render(res){
+          res.json({
+            'msg':'success'
+          });
         }
   */
 

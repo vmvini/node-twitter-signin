@@ -3,7 +3,7 @@ const api = Router();
 const twitter = require('./twitterApi/apiFacade.js');
 const httpUtils = require('./httpUtils.js');
 
-module.exports = function (consumerKey, consumerSecret, oauth_callback, userHandler){
+module.exports = function (consumerKey, consumerSecret, oauth_callback, userHandler, callback_render){
     twitter.init(consumerKey, consumerSecret, oauth_callback);
     registerRoutes(userHandler);
     return api;
@@ -29,9 +29,17 @@ function registerRoutes(userHandler){
             .getUserDetails(token)
             .then(user => {
                 if(userHandler){
+                    token.request_token = req.query.oauth_token;
                     userHandler(user, token);
                 }
-                httpUtils.sendSuccessResponse(res, {});
+                if(callback_render){
+                    res.status(200);
+                    callback_render(res);
+                }
+                else{
+                    httpUtils.sendSuccessResponse(res, {});
+                }
+                
 
             }, err => httpUtils.serverError(res, err));
 
