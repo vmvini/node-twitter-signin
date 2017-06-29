@@ -1,13 +1,12 @@
 {
   "name": "node-twitter-signin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sets twitter oauth authentication on your node js express server specifically to handle the usage by a spa app",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine ./test/test.spec.js"
   },
   "dependencies": {
-    "socket.io": "^1.7.3",
     "express": "~4.14.0",
     "oauth-1.0a": "^2.2.0",
     "request": "^2.79.0",
