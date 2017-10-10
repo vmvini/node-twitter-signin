@@ -1,42 +1,42 @@
 {
-  "name": "node-twitter-signin",
-  "version": "0.0.3",
-  "description": "sets twitter oauth authentication on your node js express server specifically to handle the usage by a spa app",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/jasmine ./test/test.spec.js"
-  },
-  "dependencies": {
-    "express": "~4.14.0",
-    "oauth-1.0a": "^2.2.0",
-    "request": "^2.79.0",
-    "crypto": "0.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vmvini/node-twitter-signin.git"
-  },
-  "keywords": [
-    "node",
-    "nodejs",
-    "twitter",
-    "oauth",
-    "express",
-    "signin",
-    "spa",
-    "spa-app", 
-    "login"
-  ],
-  "author": "vmvini",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vmvini/node-twitter-signin/issues"
-  },
-  "homepage": "https://github.com/vmvini/node-twitter-signin#readme",
-  "devDependencies": {
-    "chromedriver": "^2.30.1",
-    "jasmine": "^2.6.0",
-    "selenium-webdriver": "^3.4.0",
-    "supertest": "^3.0.0"
-  }
+    "name": "node-twitter-signin",
+    "version": "0.0.4",
+    "description": "sets twitter oauth authentication on your node js express server specifically to handle the usage by a spa app",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/jasmine ./test/test.spec.js"
+    },
+    "dependencies": {
+        "express": "~4.14.0",
+        "oauth-1.0a": "2.2.0",
+        "request": "2.79.0",
+        "crypto": "0.0.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vmvini/node-twitter-signin.git"
+    },
+    "keywords": [
+        "node",
+        "nodejs",
+        "twitter",
+        "oauth",
+        "express",
+        "signin",
+        "spa",
+        "spa-app",
+        "login"
+    ],
+    "author": "vmvini",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vmvini/node-twitter-signin/issues"
+    },
+    "homepage": "https://github.com/vmvini/node-twitter-signin#readme",
+    "devDependencies": {
+        "chromedriver": "^2.30.1",
+        "jasmine": "^2.6.0",
+        "selenium-webdriver": "^3.4.0",
+        "supertest": "^3.0.0"
+    }
 }
